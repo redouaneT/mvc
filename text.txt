@@ -1,0 +1,26 @@
+CREATE DATABASE e2295517;
+USE DATABASE e2295517;
+CREATE TABLE users (
+    userId INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(55) NOT NULL,
+    username VARCHAR(55) NOT NULL,
+    birthday DATE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    CONSTRAINT pk_userId PRIMARY KEY (userId),
+    CONSTRAINT unique_username UNIQUE (username)
+);   
+CREATE TABLE articles (
+    articleId INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    content TEXT NOT NULL,
+    date DATE NOT NULL,
+    users_userId INT NOT NULL,
+    CONSTRAINT pk_articleId PRIMARY KEY (articleId),
+    CONSTRAINT fk_users_userId FOREIGN KEY (users_userId) REFERENCES users(userId) ON DELETE CASCADE
+);
+
+[mysql]
+user=e2295517
+host=localhost
+password=zlmFVv9gZgSwOj2RsEkc
+

@@ -1,0 +1,353 @@
+:root{
+  --largeur-colonne:300px;
+  --gouttiere:24px;
+  
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:#011719;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+}
+a{
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 600;
+  color:black;
+  text-decoration: none;
+}
+
+*+h2, *+h3 *+small, *+strong{
+  margin-top: 12px;
+}
+*+span{
+  margin-top: 6px;
+}
+article+article{
+  margin-top: 24px;
+}
+
+
+/* main Container */
+.container{
+  display: flex;
+  min-height: 100vh;
+  flex-flow: column;
+  width: 100vw;
+}
+.navigation-container{
+  background-color: #0000006b;
+  min-height: 15vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+}
+.main{
+  width: 100%;
+  padding: 66px 160px;
+  margin: 0 auto;
+}
+/* article */
+.article{
+  display: flex;
+  width: 100%;
+  min-height: 180px;
+  background-color:#052528;
+  color: rgb(162, 193, 198);
+  border-radius: 25px;
+  box-shadow: 24px 24px 100px rgb(0 0 0 / 70%);
+  margin-bottom: 60px;
+
+}
+.article header{
+  flex-basis: 350px;
+  height: max-content;
+  padding: 24px 24px;
+}
+.article .button{
+  background-color:#052528;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 15px;
+
+}
+.article .button:hover{
+  border: 1px solid rgb(255, 255, 255);
+}
+.article footer{
+  min-width: 300px;
+  display: flex;
+  flex-flow: column;
+  gap: 12px;
+  padding: 24px 24px;
+}
+.article a{
+ display: block;
+ text-align: center;
+ font-weight: normal;
+ margin-bottom: 24px;
+}
+.article footer > a{
+  color: #a99043;
+}
+.article > div{
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.741);
+  margin: 24px 24px;
+  border-radius: 15px;
+}
+.article h2{
+  font-size: 30px;
+}
+.article p{
+  font-size: 18px;
+  padding: 12px;
+  color: grey;
+}
+.article strong{
+  display: block;
+  font-size: 18px;
+}
+.article span{
+  display: block;
+  font-size: 14px;
+}
+.article.light{
+  box-shadow: 6px 6px 45px #ff0000b3;
+}
+article.read{
+  min-width: max-content;
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  padding: 24px;
+}
+article.read > header{
+  flex-basis: 0;
+}
+
+article.read .button{
+  padding: 12px 66px;
+}
+
+article.read h1{
+ font-size: 64px;
+}
+
+article.read > div{
+ min-height: 25vh;
+}
+
+
+/* Navigation */
+.navigation{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+.navigation a{
+  background-color: rgb(8, 38, 47);
+  color: azure;
+  padding: 12px 24px;
+  border-right: 1px solid grey;
+}
+.navigation a:hover{
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(227, 243, 243);
+  padding: 12px 24px;
+  border-right: 1px solid grey;
+}
+.navigation > .user-name{
+  background-color: inherit;
+  border: none;
+  text-decoration: underline;
+  color: rgb(180, 187, 189);
+  text-transform: uppercase;
+  margin-right: 24px;
+}
+.navigation > .user-name:hover{
+  background-color: inherit;
+  border-right: none;
+}
+
+
+
+/* Create-acount */
+.create-acount{
+  color:white;
+  /* background-color:  rgb(0, 0, 0); */
+  width: 85%;
+  margin: 0 auto;
+  padding: 64px 0;;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 46px;
+  border-radius: 15px;
+  box-shadow: 24px 24px 100px rgba(0, 0, 0, 0.7);
+}
+.create-acount > form{
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+  padding: 36px 96px;
+  border-radius: 15px;
+  box-shadow: 24px 24px 100px rgba(0, 0, 0, 0.7);
+
+}
+
+.create-acount .group-input{
+  margin: 12px 0;
+}
+.create-acount header{
+  display: flex;
+  flex-flow: column;
+}
+.create-acount header > small{
+  display: inline-block;
+  font-size: 14px;
+  color: rgb(255, 209, 209);
+  text-decoration: underline;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.create-acount  strong{
+  font-size: 18px;
+  color: rgb(198, 95, 95);
+}
+.create-acount header > h2{
+  font-size: 36px;
+  text-align: center;
+  color: rgb(162, 193, 198);
+}
+.create-acount footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.create-acount footer > input{
+  margin-top: 12px;
+}
+.create-acount footer > a{
+  color: white;
+  text-decoration: underline;
+  margin-top: 12px;
+}
+.create-acount footer > a:hover{
+  color: rgb(162, 193, 198);
+}
+.create-acount .need-account{
+  box-shadow: 12px 12px 500px rgba(0, 0, 0, 0.7);
+}
+.create-acount.write-article{
+  background-color:  #052427;
+  width: 100%;
+  
+}
+.create-acount.write-article > form{
+  min-width: 50%;
+  background-color:inherit;
+  box-shadow: none;
+  box-shadow: 24px 24px 100px rgb(0 0 0 / 70%);
+}
+.create-acount.write-article > form > div input{
+font-size: 24px;
+}
+.create-acount.write-article textarea{
+  width: 100%;
+  min-height: 200px;
+  padding: 12px 20px;
+  font-size: 24px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  border: 3px solid #a99043;
+  resize: none;
+}
+.create-acount.write-article h2{
+  font-size: 36px;
+}
+.create-acount.write-article .button{
+
+  background-color: #8a711580;
+  border: #454033;
+}
+.create-acount.write-article .button:hover{
+  background-color: #ab975a80;
+}
+
+
+/* need-acount */
+.need-account{
+  color: rgb(255, 255, 255);
+  width: 85%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 36px;
+}
+.need-account a{
+  color: rgb(198, 150, 150);
+  text-decoration: underline;
+  margin-top: 12px;
+}
+.need-account span{
+  color: lightgray;
+  padding-right: 24px;
+}
+
+/* Group-input */
+.group-input{
+  display: flex;
+  flex-flow: column;
+  gap: 6px;
+}
+.group-input input{
+  padding: 6px;
+  width: 100%;
+  border: 3px solid #a99043;
+}
+
+/* boutons */
+.button{
+  background-color:rgb(10, 57, 64);
+  padding: 6px 24px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color:white;
+  border: 1px solid white;
+}
+.button:hover{
+  background-color: rgb(6, 23, 33);
+  color:white;
+  border-color:  rgb(162, 193, 198);
+}
+/* footer */
+.footer{
+  background-color: rgb(0, 0, 0);;
+  min-height: 25vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer span{
+  color: white;
+  display: inline-block;
+  padding: 12px;
+}
