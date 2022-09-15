@@ -24,16 +24,20 @@ function article_controller_read($request){
     $data = article_model_read($request);
     render(VIEW_DIR.'/articles/article-read.php', $data);
 }
-function article_controller_show(){
-    $request = [];
+function article_controller_show($request){
     $onSession = require_once 'lib/check_session.php';
     if (isset($onSession) && $onSession === true) {
         $data = $_SESSION['data'];
         require(MODEL_DIR.'/article.php');
         $data['article'] = article_model_show($data['user']);
+        if (isset($request['codepage'])) {
+            $data['page']= $request['codepage'];
+        }
         render(VIEW_DIR.'/base/welcome.php', $data);
+     
     }else {
         header("Location: ?module=login&action=index&msg=3");
+        $data['webPage'] = false;
     }
 }
 function article_controller_write($request){

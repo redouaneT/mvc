@@ -41,6 +41,7 @@ article+article{
   flex-flow: column;
   width: 100vw;
 }
+
 .navigation-container{
   background-color: #0000006b;
   min-height: 15vh;
@@ -49,11 +50,52 @@ article+article{
   justify-content: flex-end;
   position: sticky;
   top: 0;
+  box-shadow: 0px 6px 36px #932f0b;
+}
+.navigation-container.light-green{
+  box-shadow: 0px 6px 36px #70d75d;
+}
+.navigation-container > .logo{
+  flex: 1;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+/* Section */
+
+
+/* logo */
+.logo > strong{
+  display: inline-block;
+  background-color: #313b50;
+  color: #809fe1;
+  font-size: 22px;
+  padding: 14px 18px;
+  margin-left: 36px;
+  border-radius: 15px;
+  transform: rotateZ(-15deg);
+  position: sticky;
+  margin-top: 36px;
+  border: 1px solid #ffcd5f;
 }
 .main{
   width: 100%;
   padding: 66px 160px;
   margin: 0 auto;
+}
+.main > section > header{
+  margin-bottom: 66px;
+}
+.main-title{
+  background-color: #052528;
+  max-width: 75%;
+  font-size: 36px;
+  color:rgb(162, 193, 198);
+  text-align: center;
+  text-decoration: underline;
+  margin: 0 auto;
+  padding: 48px 24px;
+  border-radius: 25px;
 }
 /* article */
 .article{
@@ -63,6 +105,7 @@ article+article{
   background-color:#052528;
   color: rgb(162, 193, 198);
   border-radius: 25px;
+  border: 1px solid #797979;
   box-shadow: 24px 24px 100px rgb(0 0 0 / 70%);
   margin-bottom: 60px;
 
@@ -123,7 +166,7 @@ article+article{
   font-size: 14px;
 }
 .article.light{
-  box-shadow: 6px 6px 45px #ff0000b3;
+  box-shadow: 6px 6px 45px #4800ffb3;
 }
 article.read{
   min-width: max-content;
@@ -186,7 +229,7 @@ article.read > div{
 /* Create-acount */
 .create-acount{
   color:white;
-  /* background-color:  rgb(0, 0, 0); */
+  background-color:  #052528;
   width: 85%;
   margin: 0 auto;
   padding: 64px 0;;
@@ -199,6 +242,8 @@ article.read > div{
   box-shadow: 24px 24px 100px rgba(0, 0, 0, 0.7);
 }
 .create-acount > form{
+  background-color:  #011719;
+  border: 1px solid white;
   display: flex;
   flex-flow: column;
   gap: 24px;
@@ -292,6 +337,7 @@ font-size: 24px;
 
 /* need-acount */
 .need-account{
+  background-color: #011719;
   color: rgb(255, 255, 255);
   width: 85%;
   display: flex;
@@ -300,6 +346,9 @@ font-size: 24px;
   justify-content: center;
   gap: 12px;
   padding: 36px;
+  border: 1px solid white;
+  box-shadow: 24px 24px 100px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
 }
 .need-account a{
   color: rgb(198, 150, 150);

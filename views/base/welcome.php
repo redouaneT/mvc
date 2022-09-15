@@ -1,18 +1,29 @@
 <?php
   $type = "hidden";
   $class = "";
+  $title = "";
+  // On change le titre de la page selon la page demandée (Soit la page 'd'acceuil' ou la page 'Mes articles')
+  if (isset ($data['page']) && $data['page'] === "2") {
+    $title = "Mes articles publiés";
+  }else {
+    $title = "Liste de tous les articles publiés";
+  }
+  // Si une session est toujour ouverte on mis à jours les donnée
   if (isset($_SESSION["name"])) {
     $userData = $data['user'];
     $data = $data['article'];
   }
 ?>
 <section>
+  <header>
+  <h1 class="main-title"> <?php echo $title ?></h1>
+  </header>
 <?php
     foreach($data as $row){
       if (isset($_SESSION["name"])) {
         if ($row['userId'] ===  $userData['userId']) {
           $type = "submit";
-          $class = "light";
+          $class = "light";  
         }else {
           $type = "hidden";
           $class = "";

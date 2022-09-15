@@ -1,4 +1,14 @@
 
+<?php
+$classGreen = "";
+ if (isset($_SESSION["name"])) {
+    $classGreen = "";
+    $classGreen = "light-green";
+        
+  }else {
+    $classGreen = "";
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +19,10 @@
     <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-    <div class="navigation-container">
+    <div class="navigation-container  <?php echo $classGreen; ?>">
+        <div class="logo">
+            <strong>FORUM MAISONNEUVE</strong>
+        </div>
     <?php 
       if (isset($_SESSION["name"])) {
         require 'userNavigationLayout.php';
@@ -22,10 +35,9 @@
         <div class="main">
             <?php echo $content; ?>
         </div>
-      
     </div>
     <footer class="footer">
         <span>Tous les droits sont reservés</span>
     </footer>
 </body>
-</html>
+</html> 
